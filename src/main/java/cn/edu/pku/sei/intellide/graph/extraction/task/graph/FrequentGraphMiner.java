@@ -177,7 +177,7 @@ public class FrequentGraphMiner {
         settings.naturalOrderedNodeLabels = true;
         settings.algorithm = new de.parsemis.algorithms.gSpan.Algorithm<>();
         settings.strategy = new ThreadedDFSStrategy<>(16, new Statistics());
-        settings.minFreq = new IntFrequency(4);// iTextPdf项目只能用3，否则内存就不够了
+        settings.minFreq = new IntFrequency(5);// iTextPdf项目只能用3，否则内存就不够了
         settings.factory = new ListGraph.Factory<>(new NodeInfoLabelParser(), new IntegerLabelParser());
 
         Collection<Fragment<NodeInfo, Integer>> result = Miner.mine(graphs, settings);
