@@ -13,7 +13,7 @@ import cn.edu.pku.sei.intellide.graph.extraction.task.graph.GraphBuilder;
 import cn.edu.pku.sei.intellide.graph.extraction.task.parser.*;
 import cn.edu.pku.sei.structureAlignment.util.DoubleValue;
 import cn.edu.pku.sei.structureAlignment.util.Matrix;
-import cn.edu.pku.sei.summarization.Summarization;
+import cn.edu.pku.sei.structureAlignment.Summarization;
 import de.parsemis.graph.Graph;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.util.CoreMap;
@@ -21,9 +21,6 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.pipeline.*;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 
-import javafx.geometry.Pos;
-import org.apache.commons.text.similarity.CosineSimilarity;
-import org.apache.commons.text.similarity.JaccardSimilarity;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -36,7 +33,6 @@ import org.jsoup.select.Elements;
 import org.neo4j.graphdb.*;
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
-import scala.Int;
 
 public class TaskExtractor extends KnowledgeExtractor{
     public static final Label TASK = Label.label("Task");
