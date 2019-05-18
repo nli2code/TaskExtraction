@@ -27,7 +27,7 @@ public class WN {
         //String wnhome = System.getenv("WNHOME");
         //System.out.println(wnhome);
         //String path = wnhome + File.separator + "dict";
-        String path = "E:\\IdeaProjects\\intellide-graph\\Summarization\\WordNet\\WordNet-3.0\\dict";
+        String path = Config.getWordNetDictPath();
         URL url=null;
         try{
             url = new URL("file", null, path);
